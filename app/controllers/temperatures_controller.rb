@@ -1,5 +1,7 @@
 class TemperaturesController < ApplicationController
-def inddex
+
+def index
+
 
 end
 
