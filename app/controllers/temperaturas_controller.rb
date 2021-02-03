@@ -1,8 +1,18 @@
 class TemperaturasController < ApplicationController
 
   def index
-    @data = [['2019-06-01', 100], ['2019-06-02', 200], ['2019-06-03', 150]]
-
+    @data_1 = Temperatura.where(month_id: 1)
+    @data_2 = Temperatura.where(month_id: 2)
+    @data_3 = Temperatura.where(month_id: 3)
+    @data_4 = Temperatura.where(month_id: 4)
+    @data_5 = Temperatura.where(month_id: 5)
+    @data_6 = Temperatura.where(month_id: 6)
+    @data_7 = Temperatura.where(month_id: 7)
+    @data_8 = Temperatura.where(month_id: 8)
+    @data_9 = Temperatura.where(month_id: 9)
+    @data_10 = Temperatura.where(month_id: 10)
+    @data_11 = Temperatura.where(month_id: 11)
+    @data_12 = Temperatura.where(month_id: 12)
   end
 
   def new
@@ -12,6 +22,8 @@ class TemperaturasController < ApplicationController
   def create
     @temperatura = Temperatura.new(temperatura_params)
     if @temperatura.save
+      @data = Temperatura.all
+      @data.last.update(result_date: @data.last.month_id.to_s + '/' + @data.last.day_id.to_s)
       redirect_to root_path
 
     else

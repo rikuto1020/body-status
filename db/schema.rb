@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_105531) do
     t.integer "month_id", null: false
     t.integer "day_id", null: false
     t.integer "user_id", null: false
+    t.string "result_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
