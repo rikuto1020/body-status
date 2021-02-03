@@ -10,20 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2021_01_26_105531) do
 
-ActiveRecord::Schema.define(version: 2021_01_26_025256) do
-
-ActiveRecord::Schema.define(version: 2021_01_26_041558) do
-
-  create_table "temperaturas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "temperature", null: false
-    t.integer "month", null: false
-    t.integer "day", null: false
-    t.integer "user_id", null: false
+  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "size"
+    t.string "status"
+    t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "temperaturas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.float "temperature", null: false
+    t.integer "month_id", null: false
+    t.integer "day_id", null: false
+    t.integer "user_id", null: false
+    t.string "result_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false

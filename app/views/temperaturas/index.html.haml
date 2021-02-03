@@ -1,0 +1,9 @@
+
+%li.LeftHeader__Icon
+  = form_with model:  @temperatura , local: true do |f|
+    = link_to edit_user_path(current_user) 
+    = f.collection_select :month_id, Month.all, :id, :name, {include_blank: "選択してください"}, {class: "month_select"}
+    -# = line_chart @data_9.temperatura_data, width: "800px", height: "500px" 
+    -# -if @data_7.present?
+    -#   = line_chart @data_7.temperatura_data, width: "800px", height: "500px" 
+    .tempereture
