@@ -14,9 +14,10 @@ ActiveRecord::Schema.define(version: 2021_01_26_041558) do
 
   create_table "temperaturas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "temperature", null: false
-    t.integer "month", null: false
-    t.integer "day", null: false
+    t.integer "month_id", null: false
+    t.integer "day_id", null: false
     t.integer "user_id", null: false
+    t.string "result_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
