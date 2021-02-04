@@ -1,0 +1,12 @@
+
+%li.LeftHeader__Icon
+  = form_with model:  @temperatura , local: true do |f|
+    = link_to edit_user_path(current_user) 
+    = f.select :budget_d, [["--", 0],["1月", 1],["2月", 2],["3月",3],["4月",4],["5月",5],["6月",6],["7月",7],["8月",8],["9月",9],["10月",10],["11月",11],["12月",12]]
+
+    -# = line_chart @data_9.temperatura_data, width: "800px", height: "500px" 
+    -# -if @data_7.present?
+    -#   = line_chart @data_7.temperatura_data, width: "800px", height: "500px" 
+  .tempereture
+    = link_to one_temperatura_path(current_user.id), class: 'purchaseBtn__text' do
+      出品する
