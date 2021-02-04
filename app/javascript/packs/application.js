@@ -1,3 +1,4 @@
+
 require("chartkick")
 require("chart.js")
 require("@rails/ujs").start()

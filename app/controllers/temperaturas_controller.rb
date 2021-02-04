@@ -15,6 +15,7 @@ class TemperaturasController < ApplicationController
     @data_12 = Temperatura.where(month_id: 12)
   end
 
+
   def one
     @data_1 = Temperatura.where(month_id: 1)
   end
