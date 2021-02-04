@@ -18,9 +18,7 @@ $(document).on('turbolinks:load', ()=> {
       console.log(val);
       if ( val == 1) { 
       //選択したvalue値をp要素に出力
-      $('.tempereture').append('<a href="/index/index" <i class="icon-home"></i>Home</a>');}
-
-
+      $('.tempereture').append('<a href="/temperaturas/:id/one" <i class="icon-home"></i>Home</a>');}
     });
     });
   });
