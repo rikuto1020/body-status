@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_01_26_041558) do
 
   create_table "temperaturas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "temperature", null: false
+    t.float "temperature", null: false
     t.integer "month_id", null: false
     t.integer "day_id", null: false
     t.integer "user_id", null: false
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_041558) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", default: "", null: false

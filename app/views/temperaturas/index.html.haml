@@ -8,6 +8,7 @@
     -# -if @data_7.present?
     -#   = line_chart @data_7.temperatura_data, width: "800px", height: "500px" 
   .tempereture
-    = link_to one_temperatura_path(current_user.id), class: 'purchaseBtn__text' do
-      出品する
+  .under_tempereture
+    = link_to new_temperatura_path , class: 'tempereture__text' do
+      体温を記録する
 
