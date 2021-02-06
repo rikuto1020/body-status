@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   resources :temperaturas, only: [:index, :new, :create]
 
+
+
 end
