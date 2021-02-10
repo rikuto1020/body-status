@@ -19,8 +19,7 @@ class TemperaturasController < ApplicationController
   def one
     @data_1 = Temperatura.where(month_id: 1)
     @data1_select = @data_1.select(:temperature)
-    @data1_count = @data1_select.count {|num| num > 37.5}
-    # @data_1.count{ |num| num > 37.5}
+
   end
   
   def two
@@ -66,6 +65,7 @@ class TemperaturasController < ApplicationController
   def twelve
     @data_12 = Temperatura.where(month_id: 12)
   end
+
 
   def new
   @temperatura = Temperatura.new

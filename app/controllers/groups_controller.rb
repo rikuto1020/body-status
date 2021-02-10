@@ -1,9 +1,11 @@
 class GroupsController < ApplicationController
 
+
 def index
   @group = Group.find(params[:group_id])
   @groups = @group.temperaturas.includes(:user)
 end
+
 
   def new
     @group = Group.new
@@ -29,10 +31,12 @@ end
     
     end 
 
+
   end
 
   private
   def group_params
     params.require(:group).permit(:name, user_ids: [])
   end
+
 end
