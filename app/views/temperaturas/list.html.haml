@@ -1,0 +1,13 @@
+
+
+.member-list 
+  Member :
+  - @user.zip(@temperaturas) do |user, user1|
+    .member
+      = user.name
+      = user1.temperature
+
+-# .member-list 
+-#   - @group.temperaturas.each do |i|
+-#     .member
+-#       = i.temperature

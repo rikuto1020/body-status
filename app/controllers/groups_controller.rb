@@ -1,17 +1,37 @@
 class GroupsController < ApplicationController
 
+
+def index
+  @group = Group.find(params[:group_id])
+  @groups = @group.temperaturas.includes(:user)
+end
+
+
   def new
     @group = Group.new
     @group.users << current_user
   end
 
   def create
-    @group = Group.new(group_params)
-    if @group.save
-      redirect_to root_path, notice: 'グループを作成しました'
+
+    # if @group.save
+    #   redirect_to root_path, notice: 'グループを作成しました'
+    # else
+    #   render :new
+    # end
+
+    if Group.exists?(name: '1')
+      @group = Group.find_by(name: '1')
+      @group.users << current_user
+      redirect_to root_path, notice: 'グループを更新しました'
     else
-      render :new
-    end
+      @group = Group.new(group_params)
+      @group.save
+      redirect_to root_path, notice: 'グループを作成しました'
+    
+    end 
+
+
   end
 
   private

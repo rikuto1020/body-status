@@ -71,3 +71,5 @@ gem 'active_hash'
 gem 'chartkick'
 
 gem 'chartable'
+
+gem 'pry-rails'
