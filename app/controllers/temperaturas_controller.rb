@@ -15,18 +15,10 @@ class TemperaturasController < ApplicationController
     @data_12 = Temperatura.where(month_id: 12)
   end
 
-<<<<<<< Updated upstream
-=======
 
   def one
     @data_1 = Temperatura.where(month_id: 1)
     @data1_select = @data_1.select(:temperature)
-    @data1_count = Temperatura.where(month_id: 1).where('temperature > ?', 37.5).count
-    # @data_1.count{ |num| num > 37.5}
-  
-    # @graph = Temperaturas.where(user_id: current_user.id).order(day_id: "ASC")
-
-
 
   end
   
@@ -74,7 +66,7 @@ class TemperaturasController < ApplicationController
     @data_12 = Temperatura.where(month_id: 12)
   end
 
->>>>>>> Stashed changes
+
   def new
   @temperatura = Temperatura.new
   end
