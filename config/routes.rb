@@ -26,9 +26,4 @@ Rails.application.routes.draw do
     end
   end
 
-<<<<<<< Updated upstream
-=======
-  resources :groups, only: [:index,:new, :create, :edit, :update] 
-  
->>>>>>> Stashed changes
 end
