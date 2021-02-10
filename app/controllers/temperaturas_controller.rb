@@ -69,10 +69,19 @@ class TemperaturasController < ApplicationController
 
   def new
   @temperatura = Temperatura.new
+  @group = Group.find(params[:group_id])
+  end
+
+  def list
+    @group = Group.find(params[:group_id])
+    @date = Temperatura.created_today
+    @user = @group.users
+    @temperaturas = @date.group(:user_id)
   end
 
   def create
     @temperatura = Temperatura.new(temperatura_params)
+    @group = Group.find(params[:group_id])
     if @temperatura.save
       @data = Temperatura.all
       @data.last.update(result_date: @data.last.month_id.to_s + '/' + @data.last.day_id.to_s)
@@ -85,8 +94,9 @@ class TemperaturasController < ApplicationController
 
   private
   def temperatura_params
-    params.require(:temperatura).permit(:temperature, :day_id, :month_id ).merge(user_id: current_user.id)
+    params.require(:temperatura).permit(:temperature, :day_id, :month_id ).merge(user_id: current_user.id,group_id:  params[:group_id])
   end
+
 
 
 end

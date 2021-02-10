@@ -16,8 +16,9 @@ ActiveRecord::Schema.define(version: 2021_01_26_041558) do
     t.float "temperature", null: false
     t.integer "month_id", null: false
     t.integer "day_id", null: false
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.string "result_date"
+    t.integer "group_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -32,6 +33,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_041558) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["name"], name: "index_users_on_name", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

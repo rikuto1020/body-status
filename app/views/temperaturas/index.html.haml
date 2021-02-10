@@ -1,7 +1,6 @@
 
-%li.LeftHeader__Icon
+.Header
   = form_with model:  @temperatura , local: true do |f|
-    = link_to edit_user_path(current_user) 
     = f.select :budget_d, [["--", 0],["1月", 1],["2月", 2],["3月",3],["4月",4],["5月",5],["6月",6],["7月",7],["8月",8],["9月",9],["10月",10],["11月",11],["12月",12]]
 
     -# = line_chart @data_9.temperatura_data, width: "800px", height: "500px" 
@@ -9,6 +8,15 @@
     -#   = line_chart @data_7.temperatura_data, width: "800px", height: "500px" 
   .tempereture
   .under_tempereture
-    = link_to new_temperatura_path , class: 'tempereture__text' do
-      体温を記録する
+    - current_user.groups.each do |group|
+      = link_to new_group_temperatura_path(group) , class: 'tempereture__text' do
+        体温を記録する
+      = link_to list_group_temperatura_path(group,current_user.id), class:'text' do
+        home
 
+
+  = link_to edit_user_path(current_user.id), class:'text' do
+    home
+
+
+  = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'Button'
