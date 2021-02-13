@@ -73,3 +73,5 @@ gem 'chartkick'
 gem 'chartable'
 
 gem 'pry-rails'
+
+gem 'chart-js-rails', '~> 0.1.4'

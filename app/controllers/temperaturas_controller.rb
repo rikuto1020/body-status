@@ -19,7 +19,7 @@ class TemperaturasController < ApplicationController
   def one
     @data_1 = Temperatura.where(month_id: 1)
     @data1_select = @data_1.select(:temperature)
-
+    
   end
   
   def two
@@ -39,7 +39,9 @@ class TemperaturasController < ApplicationController
   end
   
   def six
-    @data_6 = Temperatura.where(month_id: 6)
+    @data_6 = Temperatura.where(month_id: 6).where(user_id: current_user)
+    @temperature = @data_6.select(:temperature)
+    @result_data = @data_6.select(:result_date)
   end
 
   def seven

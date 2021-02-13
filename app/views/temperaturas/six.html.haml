@@ -1,0 +1,10 @@
+
+  .name
+    =current_user.name
+  .month_date
+    .date
+      - @data_6.each do |temperature|
+        = temperature.temperature.to_s + '℃' 
+    .date2
+      - @data_6.each do |temperature1|
+        = temperature1.result_date
