@@ -1,5 +1,7 @@
+.top-header
+  = render "/header"
 
-.Header
+.content
   = form_with model:  @temperatura , local: true do |f|
     = f.select :budget_d, [["--", 0],["1月", 1],["2月", 2],["3月",3],["4月",4],["5月",5],["6月",6],["7月",7],["8月",8],["9月",9],["10月",10],["11月",11],["12月",12]]
 
@@ -20,3 +22,7 @@
 
 
   = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'Button'
+
+
+.under-footer
+  = render "temperaturas/footer"
