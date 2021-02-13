@@ -1,10 +1,15 @@
-
-  .name
-    =current_user.name
+.body-status-view
+  .user
+    .user_name
+      =current_user.name + 'の体温記録表'
   .month_date
-    .date
-      - @data_6.each do |temperature|
-        = temperature.temperature.to_s + '℃' 
     .date2
-      - @data_6.each do |temperature1|
-        = temperature1.result_date
+      %ul
+        - @data_6.each do |temperature1|
+          %li
+            = temperature1.result_date
+    .date
+      %ul
+        - @data_6.each do |temperature|
+          %li
+            = temperature.temperature.to_s + '℃' 
