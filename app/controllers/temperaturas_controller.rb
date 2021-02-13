@@ -82,6 +82,7 @@ class TemperaturasController < ApplicationController
   end
 
   def create
+    
     @temperatura = Temperatura.new(temperatura_params)
     @group = Group.find(params[:group_id])
     if @temperatura.save
