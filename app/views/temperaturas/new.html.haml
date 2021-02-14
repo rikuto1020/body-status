@@ -1,6 +1,16 @@
 .day
   = form_with model:  [@group,@temperatura] , local: true do |f|
-    = f.collection_select :month_id, Month.all, :id, :name, {include_blank: "選択してください"}, {class: "day_select"}
-    = f.collection_select :day_id, Day.all, :id, :name, {include_blank: "選択してください"}, {class: "day_select"}
-    = f.text_field :temperature, class: 'price_fill_in__input', placeholder: '37.5'
-    = f.submit "記録する", class: "listing__button"
+    .select-text
+      月を選択してください。
+    .select-box
+      = f.collection_select :month_id, Month.all, :id, :name, {include_blank: "選択してください"}, {class: "day_select"}
+    .select-text
+      日付を選択してください。
+    .select-box
+      = f.collection_select :day_id, Day.all, :id, :name, {include_blank: "選択してください"}, {class: "day_select"}
+    .select-text
+      本日の体温を記入してください。
+    .select-box
+      = f.text_field :temperature, class: 'price_fill_in__input', placeholder: '37.5' + '℃'
+    .submit-btn
+      = f.submit "記録する", class: "listing__button"
