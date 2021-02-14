@@ -1,19 +1,21 @@
+.header
+  .header-text
+    体温記録アプリ
+
+.content
+  .group-name
+    -if @group.id == 1
+      本日の2階病棟勤務者の体温記録
+    -elsif @group.id == 2
+      本日の3階病棟勤務者の体温記録
+    -else 
+      本日の4階病棟勤務者の体温記録 
+
+  - @user.zip(@temperaturas) do |user, user1|
+    .member
+      = user.name
+      = user1.temperature.to_s + '℃'
 
 
-.group-name
-  -if @group.id == 1
-    本日の2階病棟勤務者の体温記録
-  -elsif @group.id == 2
-    本日の3階病棟勤務者の体温記録
-  -else 
-    本日の4階病棟勤務者の体温記録 
-
-- @user.zip(@temperaturas) do |user, user1|
-  .member
-    = user.name
-    = user1.temperature.to_s + '℃'
-
--# .member-list 
--#   - @group.temperaturas.each do |i|
--#     .member
--#       = i.temperature
+.under-footer
+  = render "temperaturas/footer"
