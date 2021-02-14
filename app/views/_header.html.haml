@@ -1,0 +1,7 @@
+.header
+  .header-text
+    体温記録アプリ
+  .header-link
+    = link_to edit_user_path(current_user.id), class:'text' do
+      アカウント編集
+    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'text'

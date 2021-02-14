@@ -1,4 +1,15 @@
-= form_with model: @group, local: true do |f|
-  = f.select :name, [["--", 0],["2階病棟", 1],["3階病棟", 2],["4階病棟",3]]
-  = f.collection_check_boxes :user_ids, User.where(name: current_user.name), :id, :name
-  = f.submit "Save", class: "SettingGroupForm__button"
+.header
+  .header-text
+    体温記録アプリ
+
+  = form_with model: @group, local: true do |f|
+    .select-box
+      = f.select :name, [["--", 0],["2階病棟", 1],["3階病棟", 2],["4階病棟",3]]
+    .chaeck-box
+      = f.collection_check_boxes :user_ids, User.where(name: current_user.name), :id, :name
+    .submit-btn
+      = f.submit "Save", class: "SettingGroupForm__button"
+
+.footer
+  .under-footer
+    &copy; RikutoYamada. 2021.
