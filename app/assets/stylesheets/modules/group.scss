@@ -90,3 +90,24 @@ li {
     color: #f05050;
   }
 }
+
+.box{
+  height: 535px;
+}
+
+#group_name{
+  justify-content: center;
+  height: 48px;
+      width: 100%;
+      border: 1px solid rgb(204,204 ,204);
+      font-size: 16px; 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 5px;
+}
+
+.check-box{
+  padding-left: 450px;
+  padding-bottom: 40px;
+}

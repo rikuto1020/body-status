@@ -1,6 +1,7 @@
 .month_date{
   display: flex;
   justify-content: center;
+  font-weight: bold;
   .date2{
     li {
       margin: 1em auto;
@@ -24,9 +25,7 @@
   }
 }
 
-.user{
-  font-size: 50px;  
-}
+
 
 .temperature-view{
   width: 500px;
@@ -79,9 +78,22 @@
 }
 }
 
+#budget_d{
+  justify-content: center;
+  height: 48px;
+      width: 100%;
+      border: 1px solid rgb(204,204 ,204);
+      font-size: 16px; 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 5px;
+}
+
+
 .select-text{
   padding-left: 450px;
-  padding-top: 20px;
+  padding-top: 30px;
   text-decoration: underline;
   font-size: 20px;
 }
@@ -130,4 +142,15 @@ margin-top: 30px;
   justify-content: center;
 }
 
-
+.body-status-view{
+  height: 535px;
+  width: 100%;
+  .user{
+    font-size: 50px; 
+    text-align: center;
+    .user_name{
+      font-weight: bold;
+      padding-top: 20px;
+    }
+  }
+}

@@ -1,3 +1,7 @@
+.header
+  .header-text
+    体温記録アプリ
+
 .body-status-view
   .user
     .user_name
@@ -13,3 +17,7 @@
         - @data_6.each do |temperature|
           %li
             = temperature.temperature.to_s + '℃' 
+
+
+.under-footer
+  = render "temperaturas/footer"

@@ -1,3 +1,7 @@
+.header
+  .header-text
+    体温記録アプリ
+
 .day
   = form_with model:  [@group,@temperatura] , local: true do |f|
     .select-text
@@ -14,3 +18,6 @@
       = f.text_field :temperature, class: 'price_fill_in__input', placeholder: '37.5' + '℃'
     .submit-btn
       = f.submit "記録する", class: "listing__button"
+
+.under-footer
+  = render "temperaturas/footer"

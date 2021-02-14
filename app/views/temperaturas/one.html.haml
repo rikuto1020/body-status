@@ -1,2 +1,23 @@
-= @data1_count
-= line_chart @data_1.temperatura_data, width: "800px", height: "500px" , stepSize:10
+.header
+  .header-text
+    体温記録アプリ
+
+.body-status-view
+  .user
+    .user_name
+      =current_user.name + 'の体温記録表'
+  .month_date
+    .date2
+      %ul
+        - @data_6.each do |temperature1|
+          %li
+            = temperature1.result_date
+    .date
+      %ul
+        - @data_6.each do |temperature|
+          %li
+            = temperature.temperature.to_s + '℃' 
+
+
+.under-footer
+  = render "temperaturas/footer"
