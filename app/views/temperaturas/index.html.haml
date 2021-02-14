@@ -1,18 +1,22 @@
+.header
+  .select-text
+    体温記録を見たい月を選択してください。
+  .temperature-view
+    = form_with model:  @temperatura , local: true do |f|
+      = f.select :budget_d, [["--", 0],["1月", 1],["2月", 2],["3月",3],["4月",4],["5月",5],["6月",6],["7月",7],["8月",8],["9月",9],["10月",10],["11月",11],["12月",12]] 
 
-.Header
-  = form_with model:  @temperatura , local: true do |f|
-    = f.select :budget_d, [["--", 0],["1月", 1],["2月", 2],["3月",3],["4月",4],["5月",5],["6月",6],["7月",7],["8月",8],["9月",9],["10月",10],["11月",11],["12月",12]]
-
-    -# = line_chart @data_9.temperatura_data, width: "800px", height: "500px" 
-    -# -if @data_7.present?
-    -#   = line_chart @data_7.temperatura_data, width: "800px", height: "500px" 
+      -# = line_chart @data_9.temperatura_data, width: "800px", height: "500px" 
+      -# -if @data_7.present?
+      -#   = line_chart @data_7.temperatura_data, width: "800px", height: "500px" 
   .tempereture
   .under_tempereture
     - current_user.groups.each do |group|
-      = link_to new_group_temperatura_path(group) , class: 'tempereture__text' do
+      = link_to new_group_temperatura_path(group) , class: 'text' do
         体温を記録する
+  .under_tempereture
+    - current_user.groups.each do |group|
       = link_to list_group_temperatura_path(group,current_user.id), class:'text' do
-        home
+        所属しているグループの体温一覧を見る。
 
 
   = link_to edit_user_path(current_user.id), class:'text' do

@@ -26,6 +26,12 @@
 
 .user{
   font-size: 50px;  
+}
+
+.temperature-view{
+  width: 500px;
+  padding:40px 450px;
+  #budget_d{
 
   text-align: center;
   &_name{
@@ -78,6 +84,29 @@
   padding-top: 20px;
   text-decoration: underline;
   font-size: 20px;
+}
+
+
+a:hover {
+ 
+  color:#999;
+  text-decoration:underline;
+   
+  }
+
+  a{
+    color: blue;
+  }
+
+.text  {
+  padding-left: 450px;
+  padding-top: 20px;
+  text-decoration: none;
+  font-size: 20px;
+    }
+
+.under_tempereture{
+margin-top: 30px;
 }
 
 .submit-btn{
