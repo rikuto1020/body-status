@@ -1,6 +1,27 @@
 .name{
   font-size: 50px;  
 }
+
+.group-name{
+  font-size: 50px;
+  text-align: center;
+  margin: 2em auto;
+    padding: 1em;
+    width: 90%;
+    background-color: #fff; /* 背景色 */
+    border: 1px solid;
+}
+
+.member{
+  
+  margin: 1em auto;
+  padding: 1em;
+  width: 10%;
+  color: #666; /* 文字色 */
+  background-color: #f7f7f7; /* 背景色 */
+  border: 1px solid #ccc; /* 枠線 */
+ }
+=======
 .select-box{
   width: 500px;
   padding:40px 450px;
@@ -44,3 +65,4 @@
 .day{
   justify-content: center;
 }
+
