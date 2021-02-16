@@ -1,24 +1,21 @@
-# README
+# 体温記録アプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 開発背景
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+## アプリ概要
+・使用言語：Ruby on rails, Javascript
+・開発人数：1人
+・開発期間：15日
+・使用方法
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+①,Sign upをクリックしてください。
+②,名前、メールアドレス、パスワードを入力してユーザーの新規登録を行ってください。
+③,2階病棟、3階病棟、4階病棟のいずれかを選択して、所属するをクリックしてください。
+④,体温を記録するをクリックして、本日の体温を記録してください。
+⑤
