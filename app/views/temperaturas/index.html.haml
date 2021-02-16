@@ -14,10 +14,11 @@
     - current_user.groups.each do |group|
       = link_to new_group_temperatura_path(group) , class: 'text' do
         体温を記録する
-  .under_tempereture
-    - current_user.groups.each do |group|
-      = link_to list_group_temperatura_path(group,current_user.id), class:'text' do
-        所属しているグループの体温一覧を見る。
+  - if @data_2.exists?(user_id: current_user.id)
+    .under_tempereture
+      - current_user.groups.each do |group|
+        = link_to list_group_temperatura_path(group,current_user.id), class:'text' do
+          所属しているグループの体温一覧を見る。
 
 
 

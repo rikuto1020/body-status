@@ -97,6 +97,7 @@ class TemperaturasController < ApplicationController
   def list
     @group = Group.find(params[:group_id])
     @date = Temperatura.created_today
+    @data_2 = @date.where(user_id: current_user.id)
     @user = @group.users
     @temperaturas = @date.group(:user_id)
   end

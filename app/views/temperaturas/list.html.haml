@@ -11,11 +11,10 @@
     -else 
       本日の4階病棟勤務者の体温記録 
 
-  - if @temperaturas.exists?(user_id: current_user.id)
-    - @user.zip(@temperaturas) do |user, user1|
-      .member
-        = user.name
-        = user1.temperature.to_s + '℃'
+  - @user.zip(@temperaturas) do |user, user1|
+    .member
+      = user.name
+      = user1.temperature.to_s + '℃'
       
 .under-footer
   = render "temperaturas/footer"
