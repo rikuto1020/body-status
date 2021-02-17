@@ -6,9 +6,10 @@
 
 ## アプリ概要
 ・使用言語：Ruby on rails, Javascript
+
 ・開発人数：1人
+
 ・開発期間：15日
-・使用方法
 
 ### テストユーザー
 Email:yyy@yyy  
