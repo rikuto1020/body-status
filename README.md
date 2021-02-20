@@ -5,6 +5,8 @@
 
 
 ## アプリ概要
+・DNS名：loadbalancer-1772541242.ap-northeast-1.elb.amazonaws.com
+
 ・使用言語：Ruby on rails, Javascript
 
 ・開発人数：1人
